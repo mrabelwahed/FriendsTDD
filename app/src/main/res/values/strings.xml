@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FreindsTDD</string>
+    <string name="email">Email</string>
+    <string name="password">Passwrd</string>
+    <string name="signup">Signup</string>
+    <string name="timeline">TImeline</string>
 </resources>
