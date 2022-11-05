@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
 }
 
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, device = "id:pixel_4")
 @Composable
 fun DefaultPreview() {
     FreindsTDDTheme {

@@ -4,4 +4,6 @@
     <string name="password">Passwrd</string>
     <string name="signup">Signup</string>
     <string name="timeline">TImeline</string>
+    <string name="create_account">Create an account</string>
+    <string name="toggle_visibility">Toggle visibility</string>
 </resources>
