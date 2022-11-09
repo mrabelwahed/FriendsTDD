@@ -4,11 +4,20 @@ import com.ramadan.InstantTaskExecutorExtension
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
+import org.junit.jupiter.params.ParameterizedTest
+import org.junit.jupiter.params.provider.CsvSource
 
 @ExtendWith(InstantTaskExecutorExtension::class)
 class CredentialsValidationTest {
-    @Test
-    fun badEmail(){
+    @ParameterizedTest
+    @CsvSource(
+        "'email'",
+        "'a@b.c'",
+        "'aa@b.c'",
+        "'ab@bc.c'",
+        "'     '",
+    )
+    fun badEmail(email:String){
         val viewModel = SignupViewModel()
         viewModel.createAccount("email",":password:" , ":about:")
         assertEquals(SignupState.BadEmail , viewModel.signupState.value)
